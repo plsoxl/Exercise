@@ -14,7 +14,7 @@ jobs:
       - name: Check ZIP
         run: |
           ls -lh
-          test -f MyWorkout-OneZip-v2.zip
+          test -f MyWorkout-Android-APKBuild-v2.zip
 
       - name: Setup Java
         uses: actions/setup-java@v4
@@ -34,7 +34,7 @@ jobs:
         run: |
           rm -rf extracted
           mkdir extracted
-          unzip -q MyWorkout-OneZip-v2.zip -d extracted
+          unzip -q MyWorkout-Android-APKBuild-v2.zip -d extracted
           find extracted -maxdepth 3 -type f | sort | head -100
 
       - name: Setup Gradle
